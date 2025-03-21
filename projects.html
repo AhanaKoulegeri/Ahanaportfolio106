@@ -1,0 +1,65 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Ahana Koulegeri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body { background: #f0f9ff; font-family: 'Poppins', sans-serif; }
+        h2 { color: #0ea5e9; margin: 30px 0 20px; text-align: center; animation: fadeInDown 1s; }
+        .card {
+            background: #e0f2fe;
+            border-left: 5px solid #0ea5e9;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 700px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s;
+        }
+        .card h5 { color: #0284c7; margin-bottom: 10px; }
+        .btn-back {
+            display: inline-block;
+            margin: 30px auto;
+            background: #0ea5e9;
+            color: white;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-back:hover { background: #0284c7; }
+        .btn-container { text-align: center; }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+
+    <div class="card">
+        <h5>Placement App</h5>
+        <p>This mobile app was developed to streamline the placement process for final-year students. It enables students to apply for jobs, receive interview schedules, and track placement progress. I was responsible for frontend design and creating clear documentation for users and admins.</p>
+    </div>
+
+    <div class="card">
+        <h5>Health Care Hub</h5>
+        <p>A hospital management website built using HTML, CSS, Bootstrap, and PHP. It allows patients to book appointments, view services, and access health resources. The project emphasizes user-friendly design and responsive layout for better patient interaction.</p>
+    </div>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn btn-back"><i class="fas fa-arrow-left"></i> Home</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

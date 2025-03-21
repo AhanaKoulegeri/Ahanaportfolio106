@@ -1,0 +1,104 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ahana Koulegeri</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body { background: #f0f9ff; font-family: 'Poppins', sans-serif; }
+        h2 { color: #0ea5e9; margin: 30px 0 20px; text-align: center; animation: fadeInDown 1s; }
+        .gallery, .gallery-extra {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            animation: fadeInUp 1s;
+        }
+        .gallery img, .gallery-extra img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover, .gallery-extra img:hover {
+            transform: scale(1.1);
+        }
+        .btn-home {
+            display: inline-block;
+            margin: 30px auto;
+            background: #0ea5e9;
+            color: white;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        .btn-home:hover { background: #0284c7; }
+        .btn-container { text-align: center; }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeInZoom 0.4s ease-in-out;
+        }
+        .lightbox img {
+            width: auto;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox:target { display: flex; }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInZoom { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+    <h2><i class="fas fa-images"></i> My Work</h2>
+
+    <div class="gallery">
+        <a href="#img1"><img src="Invitation Card.jpg" alt="Invitation Card"></a>
+        <a href="#img2"><img src="Invitation Card1.jpg" alt="Invitation Card 1"></a>
+        <a href="#img3"><img src="DesignCard.jpg" alt="Design Card"></a>
+        <a href="#img4"><img src="DesignCard1.jpg" alt="Design Card 1"></a>
+        <a href="#img5"><img src="DesignCard2.jpg" alt="Design Card 2"></a>
+        <a href="#img6"><img src="Logo (2).jpg" alt="Logo"></a>
+    </div>
+
+    <h2><i class="fas fa-shapes"></i> Additional Designs</h2>
+    <div class="gallery-extra">
+        <a href="#img7"><img src="Trophy.png" alt="Trophy"></a>
+        <a href="#img8"><img src="PenPencilStand.png" alt="PenPencilStand"></a>
+        <a href="#img9"><img src="Shield.png" alt="Shield"></a>
+    </div>
+
+    <!-- Lightbox Modals -->
+    <div id="img1" class="lightbox"><a href="#"><img src="Invitation Card.jpg" alt="Invitation Card"></a></div>
+    <div id="img2" class="lightbox"><a href="#"><img src="Invitation Card1.jpg" alt="Invitation Card 1"></a></div>
+    <div id="img3" class="lightbox"><a href="#"><img src="DesignCard.jpg" alt="Design Card"></a></div>
+    <div id="img4" class="lightbox"><a href="#"><img src="DesignCard1.jpg" alt="Design Card 1"></a></div>
+    <div id="img5" class="lightbox"><a href="#"><img src="DesignCard2.jpg" alt="Design Card 2"></a></div>
+    <div id="img6" class="lightbox"><a href="#"><img src="Logo (2).jpg" alt="Logo"></a></div>
+    <div id="img7" class="lightbox"><a href="#"><img src="Trophy.png" alt="Trophy"></a></div>
+    <div id="img8" class="lightbox"><a href="#"><img src="PenPencilStand.png" alt="PenPencilStand"></a></div>
+    <div id="img9" class="lightbox"><a href="#"><img src="Shield.png" alt="Shield"></a></div>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn-home"><i class="fas fa-home"></i> Home</a>
+    </div>
+</body>
+</html>
